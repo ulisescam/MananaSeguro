@@ -1,19 +1,19 @@
 :root {
-  --bg: #f4efe3;
-  --surface: rgba(255, 252, 246, 0.76);
-  --surface-strong: #fffdf7;
-  --surface-contrast: #172033;
-  --text: #29303d;
-  --text-muted: #61708d;
-  --text-inverse: #f6efe3;
-  --border: rgba(46, 62, 92, 0.12);
-  --border-strong: rgba(20, 33, 57, 0.18);
-  --brand: #0f8b8d;
-  --brand-deep: #0a5f63;
-  --accent: #ff7a59;
-  --success: #0f766e;
-  --warning: #d97706;
-  --shadow: 0 24px 80px rgba(25, 36, 61, 0.12);
+  --bg: #a7ba9b;
+  --surface: rgba(250, 244, 240, 0.78);
+  --surface-strong: #fff4ec;
+  --surface-contrast: #26343b;
+  --text: #26343b;
+  --text-muted: #5f6c71;
+  --text-inverse: #fff4ec;
+  --border: rgba(38, 52, 59, 0.12);
+  --border-strong: rgba(38, 52, 59, 0.22);
+  --brand: #ee5a6f;
+  --brand-deep: #26343b;
+  --accent: #ff947c;
+  --success: #a7ba9b;
+  --warning: #ffd8bf;
+  --shadow: 0 24px 80px rgba(38, 52, 59, 0.18);
   --radius-xl: 32px;
   --radius-lg: 24px;
   --radius-md: 16px;
@@ -24,9 +24,9 @@
   --font-mono: 'Cascadia Code', Consolas, monospace;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(15, 139, 141, 0.16), transparent 30%),
-    radial-gradient(circle at top right, rgba(255, 122, 89, 0.16), transparent 26%),
-    linear-gradient(180deg, #fff7ea 0%, #f4efe3 55%, #ede4d1 100%);
+    radial-gradient(circle at top left, rgba(255, 216, 191, 0.5), transparent 26%),
+    radial-gradient(circle at top right, rgba(255, 148, 124, 0.32), transparent 24%),
+    linear-gradient(180deg, #b2c1a8 0%, #f6d7c0 42%, #26343b 100%);
   font: 16px/1.5 var(--font-body);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -79,8 +79,8 @@ button {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(16px);
-  background: rgba(244, 239, 227, 0.8);
-  border-bottom: 1px solid rgba(41, 48, 61, 0.08);
+  background: rgba(255, 244, 236, 0.74);
+  border-bottom: 1px solid rgba(38, 52, 59, 0.1);
 }
 
 .app-header__inner {
@@ -174,8 +174,8 @@ button {
   width: fit-content;
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(15, 139, 141, 0.14);
-  color: var(--brand-deep);
+  background: rgba(167, 186, 155, 0.3);
+  color: var(--surface-contrast);
   font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -228,7 +228,7 @@ button {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+  background: linear-gradient(135deg, var(--brand), #d93f62);
   color: var(--text-inverse);
   border: 1px solid transparent;
 }
@@ -307,13 +307,13 @@ button {
 
 .metric-card--accent {
   background:
-    linear-gradient(180deg, rgba(255, 122, 89, 0.1), rgba(255, 255, 255, 0.7)),
+    linear-gradient(180deg, rgba(255, 148, 124, 0.18), rgba(255, 244, 236, 0.76)),
     var(--surface);
 }
 
 .metric-card--brand {
   background:
-    linear-gradient(180deg, rgba(15, 139, 141, 0.1), rgba(255, 255, 255, 0.7)),
+    linear-gradient(180deg, rgba(167, 186, 155, 0.24), rgba(255, 244, 236, 0.76)),
     var(--surface);
 }
 
@@ -367,13 +367,13 @@ button {
 }
 
 .status-pill--positive {
-  background: rgba(15, 118, 110, 0.12);
-  color: var(--success);
+  background: rgba(167, 186, 155, 0.32);
+  color: var(--surface-contrast);
 }
 
 .status-pill--warning {
-  background: rgba(217, 119, 6, 0.14);
-  color: var(--warning);
+  background: rgba(255, 216, 191, 0.8);
+  color: var(--surface-contrast);
 }
 
 .planner-copy {
@@ -421,7 +421,7 @@ button {
 .projection-highlight {
   padding: 18px;
   border-radius: var(--radius-md);
-  background: rgba(15, 139, 141, 0.1);
+  background: rgba(238, 90, 111, 0.12);
 }
 
 .projection-highlight strong {
@@ -458,7 +458,7 @@ button {
   gap: 16px;
   padding: 20px 24px;
   border-radius: var(--radius-lg);
-  background: rgba(23, 32, 51, 0.95);
+  background: rgba(38, 52, 59, 0.96);
   color: var(--text-inverse);
 }
 
