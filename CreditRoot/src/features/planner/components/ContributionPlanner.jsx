@@ -72,7 +72,7 @@ export function ContributionPlanner() {
               <div>
                 <div className="d-flex justify-content-between mb-2">
                   <label className="small text-white-50">Aportación mensual (USDC)</label>
-                  <span className="fw-bold small" style={{ color: '#3b82f6' }}>
+                  <span className="fw-bold small" style={{ color: '#f59e0b' }}>
                     {formatCurrencyUsd(scenario.monthlyDepositUsd)}
                   </span>
                 </div>
@@ -166,14 +166,14 @@ export function ContributionPlanner() {
 
             <div className="row g-3 mb-4">
               {[
-                { label: 'Balance al retiro', val: formatCurrencyUsd(projection.projectedBalance), sub: 'incl. incentivos', color: '#3b82f6' },
+                { label: 'Balance al retiro', val: formatCurrencyUsd(projection.projectedBalance), sub: 'incl. incentivos', color: '#f59e0b' },
                 { label: 'Ganancia por rendimiento', val: formatCurrencyUsd(projection.growthAmount), sub: 'sobre lo aportado', color: '#22c55e' },
                 { label: 'Incentivos acumulados', val: formatCurrencyUsd(projection.totalIncentives), sub: `${projection.incentivePct}% cada 5 años`, color: '#fbbf24' },
                 { label: 'Ingreso mensual retiro', val: formatCurrencyUsd(projection.estimatedMonthlyIncome), sub: 'retiro del 4% anual', color: '#fff' },
               ].map(item => (
                 <div className="col-6" key={item.label}>
                   <div className="p-3 rounded-4"
-                    style={{ backgroundColor: `rgba(${item.color === '#3b82f6' ? '59,130,246' : item.color === '#22c55e' ? '34,197,94' : item.color === '#fbbf24' ? '251,191,36' : '255,255,255'},0.08)`, border: `1px solid rgba(${item.color === '#3b82f6' ? '59,130,246' : item.color === '#22c55e' ? '34,197,94' : item.color === '#fbbf24' ? '251,191,36' : '255,255,255'},0.2)` }}>
+                    style={{ backgroundColor: `rgba(${item.color === '#f59e0b' ? '59,130,246' : item.color === '#22c55e' ? '34,197,94' : item.color === '#fbbf24' ? '251,191,36' : '255,255,255'},0.08)`, border: `1px solid rgba(${item.color === '#f59e0b' ? '59,130,246' : item.color === '#22c55e' ? '34,197,94' : item.color === '#fbbf24' ? '251,191,36' : '255,255,255'},0.2)` }}>
                     <div className="small text-white-50 mb-1">{item.label}</div>
                     <div className="fw-bold fs-5" style={{ color: item.color }}>{item.val}</div>
                     <div className="small text-white-50">{item.sub}</div>
@@ -225,7 +225,7 @@ export function ContributionPlanner() {
                         <td className="fw-bold">{c.cycle}</td>
                         <td className="text-white-50">{c.yearStart}–{c.yearEnd}</td>
                         <td>{formatCurrencyUsd(c.startBalance)}</td>
-                        <td style={{ color: '#3b82f6' }}>{formatCurrencyUsd(c.endBalance)}</td>
+                        <td style={{ color: '#f59e0b' }}>{formatCurrencyUsd(c.endBalance)}</td>
                         <td style={{ color: '#22c55e' }}>{formatCurrencyUsd(c.totalYield)}</td>
                         <td style={{ color: '#fbbf24' }}>+{formatCurrencyUsd(c.incentiveAmount)}</td>
                       </tr>
@@ -253,7 +253,7 @@ export function ContributionPlanner() {
                 <button
                   className="btn btn-lg w-100 py-3 rounded-4 fw-bold"
                   style={{
-                    background: estado === 'success' ? 'rgba(34,197,94,0.15)' : depositoBajo ? 'rgba(255,255,255,0.05)' : 'linear-gradient(45deg, #2563eb, #3b82f6)',
+                    background: estado === 'success' ? 'rgba(34,197,94,0.15)' : depositoBajo ? 'rgba(255,255,255,0.05)' : 'linear-gradient(45deg, #d97706, #f59e0b)',
                     border: estado === 'success' ? '1px solid rgba(34,197,94,0.3)' : depositoBajo ? '1px solid rgba(255,255,255,0.1)' : 'none',
                     color: estado === 'success' ? '#22c55e' : depositoBajo ? 'rgba(255,255,255,0.3)' : '#fff',
                     cursor: depositoBajo ? 'not-allowed' : 'pointer',
@@ -273,7 +273,7 @@ export function ContributionPlanner() {
               <div className="mt-3 p-3 rounded-4 small"
                 style={{ backgroundColor: 'rgba(34,197,94,0.08)', border: '1px solid rgba(34,197,94,0.2)' }}>
                 <div className="fw-bold mb-1" style={{ color: '#22c55e' }}>✅ Transacción confirmada en testnet</div>
-                <a href={txUrl} target="_blank" rel="noreferrer" style={{ color: '#3b82f6' }}>
+                <a href={txUrl} target="_blank" rel="noreferrer" style={{ color: '#f59e0b' }}>
                   Ver en Stellar Expert → {txHash.slice(0, 16)}...
                 </a>
               </div>

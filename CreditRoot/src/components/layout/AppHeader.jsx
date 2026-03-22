@@ -11,7 +11,7 @@ export function AppHeader({ usuario }) {
 
         {/* Logo */}
         <span className="fw-black fs-4" style={{ letterSpacing: '-1.5px', color: '#fff' }}>
-          MAÑANA<span style={{ color: '#3b82f6' }}>SEGURO</span>
+          MAÑANA<span style={{ color: '#f59e0b' }}>SEGURO</span>
         </span>
 
         {/* Nav links + tasa en vivo */}
@@ -47,7 +47,7 @@ export function AppHeader({ usuario }) {
         {usuario && (
           <div className="d-flex align-items-center gap-2">
             <div className="rounded-circle d-flex align-items-center justify-content-center fw-bold small"
-              style={{ width: 32, height: 32, backgroundColor: '#3b82f6', fontSize: '0.75rem' }}>
+              style={{ width: 32, height: 32, backgroundColor: '#f59e0b', fontSize: '0.75rem' }}>
               {usuario.nombre.charAt(0).toUpperCase()}
             </div>
             <span className="small text-white-50 d-none d-md-block">{usuario.nombre.split(' ')[0]}</span>

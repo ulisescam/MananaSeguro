@@ -80,13 +80,13 @@ export function RetirementSnapshot() {
   const cardStyle = { backgroundColor: '#0c0c0c', border: '1px solid rgba(255,255,255,0.06)' }
 
   const tabs = [
-    { key: 'resumen',   label: '📊 Resumen' },
+    { key: 'resumen', label: '📊 Resumen' },
     { key: 'historial', label: '📋 Historial' },
-    { key: 'ciclos',    label: '🔄 Ciclos' },
-    { key: 'prestamo',  label: '🚨 Autopréstamo' },
+    { key: 'ciclos', label: '🔄 Ciclos' },
+    { key: 'prestamo', label: '🚨 Autopréstamo' },
     { key: 'referidos', label: '👥 Referidos' },
-    { key: 'carlos',    label: '🛵 Simulación' },
-    { key: 'ingresos',  label: '💰 Distribución' },
+    { key: 'carlos', label: '🛵 Simulación' },
+    { key: 'ingresos', label: '💰 Distribución' },
   ]
 
   return (
@@ -94,7 +94,7 @@ export function RetirementSnapshot() {
       <div className="mb-4">
         <div className="d-flex align-items-center gap-2 mb-2 flex-wrap">
           <div className="badge rounded-pill px-3 py-2"
-            style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#3b82f6', border: '1px solid rgba(59,130,246,0.2)' }}>
+            style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#f59e0b', border: '1px solid rgba(59,130,246,0.2)' }}>
             📊 Mañana Seguro
           </div>
           {address && <span className="text-white-50 small font-monospace">{address.slice(0, 8)}...{address.slice(-8)}</span>}
@@ -120,7 +120,7 @@ export function RetirementSnapshot() {
         <>
           <div className="row g-3 mb-4">
             {[
-              { label: 'USDC en wallet', val: `$${usdcLibre.toFixed(2)}`, sub: 'Balance libre Stellar testnet', color: '#3b82f6' },
+              { label: 'USDC en wallet', val: `$${usdcLibre.toFixed(2)}`, sub: 'Balance libre Stellar testnet', color: '#f59e0b' },
               { label: 'USDC bloqueado', val: formatCurrencyUsd(lockedBalance), sub: `${depositCount} depósito${depositCount !== 1 ? 's' : ''} on-chain`, color: '#22c55e' },
               { label: 'Proyección a 20 años', val: formatCurrencyUsd(Number(proyeccion20)), sub: `a ${userRate.toFixed(2)}% APY`, color: '#fbbf24' },
               { label: 'Fecha de retiro', val: fechaRetiro ?? '—', sub: 'Según contrato Soroban', color: 'rgba(255,255,255,0.6)' },
@@ -143,11 +143,11 @@ export function RetirementSnapshot() {
             </div>
             <div className="progress rounded-pill mb-2" style={{ height: 8, backgroundColor: 'rgba(255,255,255,0.05)' }}>
               <div className="progress-bar rounded-pill"
-                style={{ width: `${Math.min((lockedBalance / meta) * 100, 100)}%`, background: 'linear-gradient(90deg, #2563eb, #3b82f6)' }} />
+                style={{ width: `${Math.min((lockedBalance / meta) * 100, 100)}%`, background: 'linear-gradient(90deg, #d97706, #f59e0b)' }} />
             </div>
             <div className="d-flex justify-content-between">
               <span className="small text-white-50">{formatCurrencyUsd(lockedBalance)} bloqueados en contrato</span>
-              <span className="small" style={{ color: '#3b82f6' }}>{((lockedBalance / meta) * 100).toFixed(1)}%</span>
+              <span className="small" style={{ color: '#f59e0b' }}>{((lockedBalance / meta) * 100).toFixed(1)}%</span>
             </div>
           </div>
 
@@ -158,7 +158,7 @@ export function RetirementSnapshot() {
                 style={{
                   backgroundColor: activeTab === t.key ? 'rgba(59,130,246,0.15)' : 'transparent',
                   border: activeTab === t.key ? '1px solid rgba(59,130,246,0.4)' : '1px solid rgba(255,255,255,0.08)',
-                  color: activeTab === t.key ? '#3b82f6' : 'rgba(255,255,255,0.4)',
+                  color: activeTab === t.key ? '#f59e0b' : 'rgba(255,255,255,0.4)',
                   whiteSpace: 'nowrap',
                 }}
                 onClick={() => setActiveTab(t.key)}>
@@ -215,7 +215,7 @@ export function RetirementSnapshot() {
                       <tr key={c.cycle}>
                         <td className="fw-bold">{c.cycle}</td>
                         <td className="text-white-50">{c.yearStart}–{c.yearEnd}</td>
-                        <td style={{ color: '#3b82f6' }}>{formatCurrencyUsd(c.endBalance)}</td>
+                        <td style={{ color: '#f59e0b' }}>{formatCurrencyUsd(c.endBalance)}</td>
                         <td style={{ color: '#22c55e' }}>{formatCurrencyUsd(c.totalYield)}</td>
                         <td style={{ color: '#fbbf24' }}>+{formatCurrencyUsd(c.incentiveAmount)}</td>
                       </tr>
@@ -237,7 +237,7 @@ export function RetirementSnapshot() {
           {/* AutoloanCard recibe el saldo REAL del contrato y la dirección */}
           {activeTab === 'prestamo' && <AutoloanCard lockedBalance={lockedBalance} walletAddress={address} />}
           {activeTab === 'referidos' && <ReferralModule userName={address?.slice(0, 8) ?? 'usuario'} walletAddress={address} />}
-          {activeTab === 'carlos'    && <CarlosSimulator />}
+          {activeTab === 'carlos' && <CarlosSimulator />}
 
           {activeTab === 'ingresos' && (
             <div className="p-4 rounded-4" style={cardStyle}>
@@ -245,7 +245,7 @@ export function RetirementSnapshot() {
               <div className="mb-4">
                 <div className="progress rounded-pill mb-2" style={{ height: 24, backgroundColor: 'rgba(255,255,255,0.05)' }}>
                   <div className="progress-bar"
-                    style={{ width: `${(userRate / cetesRate) * 100}%`, background: 'linear-gradient(90deg, #2563eb, #22c55e)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700 }}>
+                    style={{ width: `${(userRate / cetesRate) * 100}%`, background: 'linear-gradient(90deg, #d97706, #22c55e)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 700 }}>
                     {userRate.toFixed(2)}% → tú
                   </div>
                   <div className="progress-bar"
@@ -263,7 +263,7 @@ export function RetirementSnapshot() {
                 <table className="table table-dark table-borderless mb-0" style={{ fontSize: 13 }}>
                   <thead><tr className="text-white-50"><th>Usuarios</th><th>Activos</th><th>Ingreso anual</th></tr></thead>
                   <tbody>
-                    {[['200','$100K USDC','$1,000'],['1,000','$500K USDC','$5,000'],['10,000','$5M USDC','$50,000'],['50,000','$25M USDC','$250,000']].map(([u,a,i]) => (
+                    {[['200', '$100K USDC', '$1,000'], ['1,000', '$500K USDC', '$5,000'], ['10,000', '$5M USDC', '$50,000'], ['50,000', '$25M USDC', '$250,000']].map(([u, a, i]) => (
                       <tr key={u}><td className="fw-bold">{u}</td><td className="text-white-50">{a}</td><td style={{ color: '#22c55e' }}>{i} USDC</td></tr>
                     ))}
                   </tbody>

@@ -35,7 +35,7 @@ export function WithdrawalScreen() {
                   <div key={item.step} className="d-flex gap-3 align-items-start">
                     <div className="d-flex flex-column align-items-center">
                       <div className="rounded-circle d-flex align-items-center justify-content-center fw-bold"
-                        style={{ width: 32, height: 32, backgroundColor: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.3)', fontSize: 12, color: '#3b82f6', flexShrink: 0 }}>
+                        style={{ width: 32, height: 32, backgroundColor: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.3)', fontSize: 12, color: '#f59e0b', flexShrink: 0 }}>
                         {i + 1}
                       </div>
                       {i < 4 && <div style={{ width: 1, height: 20, backgroundColor: 'rgba(255,255,255,0.08)', marginTop: 4 }} />}

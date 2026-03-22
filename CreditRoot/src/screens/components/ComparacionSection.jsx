@@ -10,7 +10,7 @@ function ComparacionSection() {
         <section className="container py-5 my-3">
             <div className="row g-5 align-items-center">
                 <div className="col-lg-4">
-                    <span className="badge rounded-pill px-3 py-2 mb-3" style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#3b82f6', border: '1px solid rgba(59,130,246,0.2)' }}>
+                    <span className="badge rounded-pill px-3 py-2 mb-3" style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#f59e0b', border: '1px solid rgba(59,130,246,0.2)' }}>
                         La comparación
                     </span>
                     <h2 className="display-5 fw-bold mb-3" style={{ letterSpacing: '-2px' }}>
@@ -26,7 +26,7 @@ function ComparacionSection() {
                                     <span className="small fw-bold text-white">{item.label}</span>
                                     <div className="d-flex gap-4">
                                         <span className="text-white-50 small">AFORE: {item.afore}</span>
-                                        <span style={{ color: '#3b82f6' }} className="small fw-bold">RC: {item.retiro}</span>
+                                        <span style={{ color: '#f59e0b' }} className="small fw-bold">RC: {item.retiro}</span>
                                     </div>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
@@ -34,7 +34,7 @@ function ComparacionSection() {
                                         <div className="progress-bar rounded-pill" style={{ width: `${item.barAfore}%`, backgroundColor: 'rgba(255,255,255,0.2)' }}></div>
                                     </div>
                                     <div className="progress rounded-pill" style={{ height: 6, backgroundColor: 'rgba(255,255,255,0.05)' }}>
-                                        <div className="progress-bar rounded-pill" style={{ width: `${item.barRetiro}%`, backgroundColor: '#3b82f6' }}></div>
+                                        <div className="progress-bar rounded-pill" style={{ width: `${item.barRetiro}%`, backgroundColor: '#f59e0b' }}></div>
                                     </div>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@ function ComparacionSection() {
                                 <span className="text-white-50 small">AFORE tradicional</span>
                             </div>
                             <div className="d-flex align-items-center gap-2">
-                                <div className="rounded-circle" style={{ width: 10, height: 10, backgroundColor: '#3b82f6' }}></div>
+                                <div className="rounded-circle" style={{ width: 10, height: 10, backgroundColor: '#f59e0b' }}></div>
                                 <span className="text-white-50 small">RetiroChain</span>
                             </div>
                         </div>

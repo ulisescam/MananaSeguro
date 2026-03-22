@@ -10,7 +10,7 @@ export function HomeScreen() {
           {/* Copy izquierdo */}
           <div className="col-lg-6">
             <div className="badge rounded-pill mb-3 px-3 py-2"
-              style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#3b82f6', border: '1px solid rgba(59,130,246,0.2)' }}>
+              style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#D4AF37', border: '1px solid rgba(59,130,246,0.2)' }}>
               🔒 Ahorro para retiro · Etherfuse CETES · Stellar
             </div>
 
@@ -27,7 +27,7 @@ export function HomeScreen() {
             <div className="d-flex gap-3 flex-wrap mb-5">
               <a href="#proyeccion"
                 className="btn btn-primary btn-lg px-5 py-3 rounded-4 fw-bold"
-                style={{ background: 'linear-gradient(45deg, #2563eb, #3b82f6)', border: 'none' }}>
+                style={{ background: 'linear-gradient(45deg, #d97706, #f59e0b)', border: 'none' }}>
                 Ver simulador →
               </a>
               <a href="#dashboard"

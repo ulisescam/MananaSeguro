@@ -159,7 +159,7 @@ export function AutoloanCard({ lockedBalance = 0, walletAddress = null }) {
           <div style={{ fontSize: 32 }} className="mb-2">🔒</div>
           <p className="text-white-50 small mb-0">
             Necesitas tener USDC bloqueado en el contrato para solicitar un autopréstamo.
-            Ve a la sección <strong style={{ color: '#3b82f6' }}>Depósito</strong> para empezar.
+            Ve a la sección <strong style={{ color: '#f59e0b' }}>Depósito</strong> para empezar.
           </p>
         </div>
       )}
@@ -329,7 +329,7 @@ export function AutoloanCard({ lockedBalance = 0, walletAddress = null }) {
                 ✅ Transacción confirmada ·{' '}
                 <a href={`https://stellar.expert/explorer/testnet/tx/${txHash}`}
                   target="_blank" rel="noopener noreferrer"
-                  style={{ color: '#3b82f6' }}>
+                  style={{ color: '#f59e0b' }}>
                   {txHash.slice(0, 16)}... →
                 </a>
               </div>

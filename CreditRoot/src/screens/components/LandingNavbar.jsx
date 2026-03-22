@@ -5,7 +5,7 @@ function LandingNavbar({ onLogin, onRegister, onVolver, soloVolver }) {
             <div className="container d-flex justify-content-between align-items-center">
 
                 <span className="fw-black fs-4" style={{ letterSpacing: '-1.5px', color: '#fff' }}>
-                    MAÑANA<span style={{ color: '#3b82f6' }}>SEGURO</span>
+                    MAÑANA<span style={{ color: '#f59e0b' }}>SEGURO</span>
                 </span>
 
                 {soloVolver ? (
@@ -21,7 +21,7 @@ function LandingNavbar({ onLogin, onRegister, onVolver, soloVolver }) {
                         </button>
                         <button
                             className="btn btn-primary px-4 rounded-pill fw-bold"
-                            style={{ background: 'linear-gradient(45deg, #2563eb, #3b82f6)', border: 'none' }}
+                            style={{ background: 'linear-gradient(45deg, #d97706, #f59e0b)', border: 'none' }}
                             onClick={onRegister}>
                             Comenzar gratis
                         </button>

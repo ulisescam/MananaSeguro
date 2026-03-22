@@ -36,7 +36,7 @@ export function ConnectAccountCard() {
       {/* Header */}
       <div className="mb-4">
         <div className="badge rounded-pill px-3 py-2 mb-3"
-          style={{ backgroundColor: wallet ? 'rgba(34,197,94,0.1)' : 'rgba(59,130,246,0.1)', color: wallet ? '#22c55e' : '#3b82f6', border: `1px solid ${wallet ? 'rgba(34,197,94,0.2)' : 'rgba(59,130,246,0.2)'}` }}>
+          style={{ backgroundColor: wallet ? 'rgba(34,197,94,0.1)' : 'rgba(59,130,246,0.1)', color: wallet ? '#22c55e' : '#f59e0b', border: `1px solid ${wallet ? 'rgba(34,197,94,0.2)' : 'rgba(59,130,246,0.2)'}` }}>
           {wallet ? '✓ Wallet conectada' : '🔐 Conecta tu wallet'}
         </div>
         <h3 className="fw-bold mb-2" style={{ letterSpacing: '-1px' }}>Freighter · Stellar</h3>
@@ -48,7 +48,7 @@ export function ConnectAccountCard() {
       {/* Botón */}
       <button
         className="btn btn-primary w-100 py-3 rounded-4 fw-bold mb-4"
-        style={{ background: wallet ? 'rgba(34,197,94,0.15)' : 'linear-gradient(45deg, #2563eb, #3b82f6)', border: wallet ? '1px solid rgba(34,197,94,0.3)' : 'none', color: wallet ? '#22c55e' : '#fff' }}
+        style={{ background: wallet ? 'rgba(34,197,94,0.15)' : 'linear-gradient(45deg, #d97706, #f59e0b)', border: wallet ? '1px solid rgba(34,197,94,0.3)' : 'none', color: wallet ? '#22c55e' : '#fff' }}
         onClick={handleConectar}
         disabled={!!wallet || loading}
       >
@@ -72,7 +72,7 @@ export function ConnectAccountCard() {
         {[
           { label: 'Estado', val: wallet ? 'Conectada ✓' : 'Pendiente', color: wallet ? '#22c55e' : 'rgba(255,255,255,0.3)' },
           { label: 'Balance XLM', val: balance ? `${balance.xlm} XLM` : '—', color: '#fff' },
-          { label: 'Balance USDC', val: balance ? `$${balance.usdc}` : '—', color: '#3b82f6' },
+          { label: 'Balance USDC', val: balance ? `$${balance.usdc}` : '—', color: '#f59e0b' },
           { label: 'Dirección', val: wallet ? `${wallet.slice(0, 6)}...${wallet.slice(-6)}` : '—', color: 'rgba(255,255,255,0.5)', mono: true },
         ].map((item) => (
           <div className="col-6" key={item.label}>

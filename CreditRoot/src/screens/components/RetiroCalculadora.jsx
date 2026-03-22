@@ -16,7 +16,7 @@ function RetiroCalculadora() {
         <div className="p-1 rounded-5" style={{ background: 'linear-gradient(145deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)' }}>
             <div className="p-4 p-md-5 rounded-5" style={{ backgroundColor: '#0c0c0c' }}>
                 <span className="text-white-50 small text-uppercase mb-2 d-block">Proyección estimada</span>
-                <h2 className="display-4 fw-bold mb-4" style={{ color: '#3b82f6' }}>
+                <h2 className="display-4 fw-bold mb-4" style={{ color: '#f59e0b' }}>
                     ${resultado.toLocaleString()} <span className="fs-6 text-white-50">MXN</span>
                 </h2>
                 <div className="mb-4">

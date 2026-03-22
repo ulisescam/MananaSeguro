@@ -37,7 +37,7 @@ function CalculadoraHero({ onRegister }) {
         <p className="text-white-50 small text-uppercase mb-1" style={{ letterSpacing: 1 }}>
           Proyección a {anios} años
         </p>
-        <h2 className="fw-black mb-1" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', letterSpacing: '-2px', color: '#3b82f6' }}>
+        <h2 className="fw-black mb-1" style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', letterSpacing: '-2px', color: '#f59e0b' }}>
           ${Math.round(total).toLocaleString('es-MX')}
         </h2>
         <p className="text-white-50 small mb-4">USDC · a {apy.toFixed(2)}% APY neto</p>
@@ -50,7 +50,7 @@ function CalculadoraHero({ onRegister }) {
           </div>
           <input type="range" className="form-range" min={2} max={500} step={1}
             value={cuota} onChange={e => setCuota(Number(e.target.value))}
-            style={{ accentColor: '#3b82f6' }} />
+            style={{ accentColor: '#f59e0b' }} />
           <div className="d-flex justify-content-between">
             <span className="text-white-50" style={{ fontSize: 11 }}>$2 USDC</span>
             <span className="text-white-50" style={{ fontSize: 11 }}>$500 USDC</span>
@@ -64,7 +64,7 @@ function CalculadoraHero({ onRegister }) {
           </div>
           <input type="range" className="form-range" min={1} max={40}
             value={anios} onChange={e => setAnios(Number(e.target.value))}
-            style={{ accentColor: '#3b82f6' }} />
+            style={{ accentColor: '#f59e0b' }} />
           <div className="d-flex justify-content-between">
             <span className="text-white-50" style={{ fontSize: 11 }}>1 año</span>
             <span className="text-white-50" style={{ fontSize: 11 }}>40 años</span>
@@ -73,7 +73,7 @@ function CalculadoraHero({ onRegister }) {
 
         <button
           className="btn btn-primary w-100 py-3 rounded-4 fw-bold fs-6"
-          style={{ background: 'linear-gradient(45deg, #2563eb, #3b82f6)', border: 'none' }}
+          style={{ background: 'linear-gradient(45deg, #d97706, #f59e0b)', border: 'none' }}
           onClick={onRegister}>
           Empezar a ahorrar →
         </button>
@@ -109,7 +109,7 @@ function TresPasos() {
     <section className="container py-5 my-3">
       <div className="text-center mb-5">
         <span className="badge rounded-pill px-3 py-2 mb-3"
-          style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#3b82f6', border: '1px solid rgba(59,130,246,0.2)' }}>
+          style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#f59e0b', border: '1px solid rgba(59,130,246,0.2)' }}>
           ¿Cómo funciona?
         </span>
         <h2 className="fw-black" style={{ letterSpacing: '-2px', fontSize: 'clamp(1.8rem,4vw,2.8rem)' }}>
@@ -152,7 +152,7 @@ function CtaFinal({ onRegister, onLogin }) {
         </p>
         <div className="d-flex gap-3 justify-content-center flex-wrap">
           <button className="btn btn-primary btn-lg px-5 py-3 rounded-4 fw-bold"
-            style={{ background: 'linear-gradient(45deg, #2563eb, #3b82f6)', border: 'none' }}
+            style={{ background: 'linear-gradient(45deg, #d97706, #f59e0b)', border: 'none' }}
             onClick={onRegister}>
             Crear cuenta gratis
           </button>
@@ -210,7 +210,7 @@ export function LandingScreen({ onLogin, onRegister }) {
             {/* Botones mobile */}
             <div className="d-flex gap-3 flex-wrap d-lg-none">
               <button className="btn btn-primary btn-lg px-5 py-3 rounded-4 fw-bold"
-                style={{ background: 'linear-gradient(45deg, #2563eb, #3b82f6)', border: 'none' }}
+                style={{ background: 'linear-gradient(45deg, #d97706, #f59e0b)', border: 'none' }}
                 onClick={onRegister}>
                 Comenzar ahora
               </button>

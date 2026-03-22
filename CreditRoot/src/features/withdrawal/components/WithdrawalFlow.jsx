@@ -113,11 +113,11 @@ export function WithdrawalFlow({ meta = 10000 }) {
             <div className="mb-4">
               <div className="d-flex justify-content-between mb-2">
                 <span className="small fw-bold">Progreso hacia la meta</span>
-                <span className="small" style={{ color: '#3b82f6' }}>{progresoPct.toFixed(1)}%</span>
+                <span className="small" style={{ color: '#f59e0b' }}>{progresoPct.toFixed(1)}%</span>
               </div>
               <div className="progress rounded-pill mb-2" style={{ height: 12, backgroundColor: 'rgba(255,255,255,0.05)' }}>
                 <div className="progress-bar rounded-pill"
-                  style={{ width: `${progresoPct}%`, background: 'linear-gradient(90deg, #2563eb, #3b82f6)' }} />
+                  style={{ width: `${progresoPct}%`, background: 'linear-gradient(90deg, #d97706, #f59e0b)' }} />
               </div>
               <div className="d-flex justify-content-between">
                 <span className="small text-white-50">{formatCurrencyUsd(saldoContrato)} bloqueados on-chain</span>
@@ -127,7 +127,7 @@ export function WithdrawalFlow({ meta = 10000 }) {
 
             <div className="row g-3">
               {[
-                { label: 'Saldo en contrato', val: formatCurrencyUsd(saldoContrato), color: '#3b82f6' },
+                { label: 'Saldo en contrato', val: formatCurrencyUsd(saldoContrato), color: '#f59e0b' },
                 { label: 'Falta para la meta', val: formatCurrencyUsd(falta), color: '#f87171' },
                 { label: 'Fecha de retiro', val: fechaRetiro ?? '—', color: '#fbbf24' },
                 { label: 'Rendimiento activo', val: `${userRate}% APY`, color: '#22c55e' },
@@ -190,7 +190,7 @@ export function WithdrawalFlow({ meta = 10000 }) {
                 { label: 'Tasa Etherfuse aplicada', val: `${userRate}% APY`, color: '#22c55e' },
                 { label: 'Tasa bruta CETES', val: `${cetesRate}%`, color: 'rgba(255,255,255,0.5)' },
                 { label: 'Comisión plataforma (1%)', val: formatCurrencyUsd(saldoContrato * 0.01), color: '#f87171' },
-                { label: 'Fecha de retiro', val: fechaRetiro ?? '—', color: '#3b82f6' },
+                { label: 'Fecha de retiro', val: fechaRetiro ?? '—', color: '#f59e0b' },
               ].map(item => (
                 <div key={item.label} className="d-flex justify-content-between py-2"
                   style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
@@ -257,7 +257,7 @@ export function WithdrawalFlow({ meta = 10000 }) {
             <h6 className="fw-bold mb-3">Resumen de tu retiro</h6>
             <div className="row g-3 mb-4">
               {[
-                { label: 'Aportado estimado', val: formatCurrencyUsd(resumenFinal.totalAportado), color: '#3b82f6' },
+                { label: 'Aportado estimado', val: formatCurrencyUsd(resumenFinal.totalAportado), color: '#f59e0b' },
                 { label: 'Rendimiento Etherfuse', val: formatCurrencyUsd(resumenFinal.rendimiento), color: '#22c55e' },
                 { label: 'Comisión plataforma (1%)', val: `−${formatCurrencyUsd(resumenFinal.comision)}`, color: '#f87171' },
                 { label: 'Total recibido', val: formatCurrencyUsd(resumenFinal.total), color: '#fff', bold: true },
@@ -289,7 +289,7 @@ export function WithdrawalFlow({ meta = 10000 }) {
                 <div className="small fw-bold mb-1" style={{ color: '#22c55e' }}>✅ Transacción confirmada en Stellar</div>
                 <a href={`https://stellar.expert/explorer/testnet/tx/${txHash}`}
                   target="_blank" rel="noreferrer"
-                  className="small font-monospace" style={{ color: '#3b82f6' }}>
+                  className="small font-monospace" style={{ color: '#f59e0b' }}>
                   Ver en Stellar Expert → {txHash.slice(0, 20)}...
                 </a>
               </div>

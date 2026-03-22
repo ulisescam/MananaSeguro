@@ -26,7 +26,7 @@ function PasosSection() {
         <section className="container py-5 my-3">
             <div className="text-center mb-5">
                 <span className="badge rounded-pill px-3 py-2 mb-3"
-                    style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#3b82f6', border: '1px solid rgba(59,130,246,0.2)' }}>
+                    style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#f59e0b', border: '1px solid rgba(59,130,246,0.2)' }}>
                     Así funciona
                 </span>
                 <h2 className="display-5 fw-bold" style={{ letterSpacing: '-2px' }}>
@@ -70,7 +70,7 @@ function PasosSection() {
                     {[
                         { text: 'Tu USDC', color: '#fff' },
                         { text: '→', color: 'rgba(255,255,255,0.2)' },
-                        { text: 'Contrato inteligente', color: '#3b82f6' },
+                        { text: 'Contrato inteligente', color: '#f59e0b' },
                         { text: '→', color: 'rgba(255,255,255,0.2)' },
                         { text: 'Etherfuse CETES', color: '#22c55e' },
                         { text: '→', color: 'rgba(255,255,255,0.2)' },

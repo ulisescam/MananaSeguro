@@ -24,7 +24,7 @@ export function AuthScreen({ modo, onAuth, onVolver }) {
     const getInputStyle = (id) => ({
         transition: 'all 0.3s ease',
         backgroundColor: 'rgba(255,255,255,0.03)',
-        border: isFocused === id ? '1px solid #3b82f6' : '1px solid rgba(255,255,255,0.1)',
+        border: isFocused === id ? '1px solid #f59e0b' : '1px solid rgba(255,255,255,0.1)',
         outline: 'none',
         color: '#fff',
         padding: '12px 20px',
@@ -39,7 +39,7 @@ export function AuthScreen({ modo, onAuth, onVolver }) {
                 <div className="row align-items-center g-5">
 
                     <div className="col-lg-6 d-none d-lg-block">
-                        <div className="badge rounded-pill mb-3 px-3 py-2" style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#3b82f6', border: '1px solid rgba(59,130,246,0.2)' }}>
+                        <div className="badge rounded-pill mb-3 px-3 py-2" style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#f59e0b', border: '1px solid rgba(59,130,246,0.2)' }}>
                             🛡️ Seguridad de Grado Bancario On-Chain
                         </div>
                         <h1 className="display-3 fw-bold mb-4" style={{ lineHeight: 1, letterSpacing: '-3px' }}>
@@ -106,7 +106,7 @@ export function AuthScreen({ modo, onAuth, onVolver }) {
 
                                     <button type="submit"
                                         className="btn btn-primary btn-lg w-100 py-3 rounded-4 fw-bold shadow mt-2"
-                                        style={{ background: 'linear-gradient(45deg, #2563eb, #3b82f6)', border: 'none' }}>
+                                        style={{ background: 'linear-gradient(45deg, #d97706, #f59e0b)', border: 'none' }}>
                                         {modo === 'login' ? 'Entrar a mi Retiro' : 'Crear mi Cuenta'}
                                     </button>
 

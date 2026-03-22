@@ -20,7 +20,7 @@ function CtaFinal({ onLogin, onRegister }) {
 
                 <div className="d-flex gap-3 justify-content-center flex-wrap mb-5">
                     <button className="btn btn-primary btn-lg px-5 py-3 rounded-4 fw-bold"
-                        style={{ background: 'linear-gradient(45deg, #2563eb, #3b82f6)', border: 'none' }}
+                        style={{ background: 'linear-gradient(45deg, #d97706, #f59e0b)', border: 'none' }}
                         onClick={onRegister}>
                         Empezar con $2 USDC →
                     </button>
@@ -41,7 +41,7 @@ function CtaFinal({ onLogin, onRegister }) {
                         <div className="col-6 col-md-3" key={s.label}>
                             <div className="p-3 rounded-4"
                                 style={{ backgroundColor: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
-                                <div className="fw-bold fs-5" style={{ color: '#3b82f6' }}>{s.val}</div>
+                                <div className="fw-bold fs-5" style={{ color: '#f59e0b' }}>{s.val}</div>
                                 <div className="small text-white-50">{s.label}</div>
                             </div>
                         </div>

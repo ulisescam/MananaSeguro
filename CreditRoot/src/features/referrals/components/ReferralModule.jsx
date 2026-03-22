@@ -102,7 +102,7 @@ export function ReferralModule({ userName = 'Usuario', walletAddress = null }) {
                   border: isActive ? '1px solid rgba(59,130,246,0.3)' : '1px solid rgba(255,255,255,0.04)',
                 }}>
                 <div>
-                  <div className="small fw-bold" style={{ color: isActive ? '#3b82f6' : '#fff' }}>
+                  <div className="small fw-bold" style={{ color: isActive ? '#f59e0b' : '#fff' }}>
                     {isActive ? '→ ' : ''}{s.label}
                   </div>
                   <div className="small text-white-50">{s.description}</div>
@@ -110,7 +110,7 @@ export function ReferralModule({ userName = 'Usuario', walletAddress = null }) {
                 <span className="badge rounded-pill"
                   style={{
                     backgroundColor: isActive ? 'rgba(59,130,246,0.15)' : 'rgba(255,255,255,0.05)',
-                    color: isActive ? '#3b82f6' : 'rgba(255,255,255,0.4)',
+                    color: isActive ? '#f59e0b' : 'rgba(255,255,255,0.4)',
                     border: isActive ? '1px solid rgba(59,130,246,0.3)' : '1px solid transparent',
                   }}>
                   {s.pct}%
@@ -151,7 +151,7 @@ export function ReferralModule({ userName = 'Usuario', walletAddress = null }) {
           <button
             className="btn btn-sm px-3 rounded-3 fw-bold flex-shrink-0"
             style={{
-              background: copied ? 'rgba(34,197,94,0.15)' : 'linear-gradient(45deg, #2563eb, #3b82f6)',
+              background: copied ? 'rgba(34,197,94,0.15)' : 'linear-gradient(45deg, #d97706, #f59e0b)',
               border: copied ? '1px solid rgba(34,197,94,0.3)' : 'none',
               color: copied ? '#22c55e' : '#fff',
               minWidth: 80,
@@ -162,7 +162,7 @@ export function ReferralModule({ userName = 'Usuario', walletAddress = null }) {
           </button>
         </div>
         <div className="small text-white-50">
-          Código: <span className="font-monospace fw-bold" style={{ color: '#3b82f6' }}>{referralCode}</span>
+          Código: <span className="font-monospace fw-bold" style={{ color: '#f59e0b' }}>{referralCode}</span>
           {' '}· Un referido califica después de 6 meses activo y al menos 1 depósito.
         </div>
       </div>
@@ -181,7 +181,7 @@ export function ReferralModule({ userName = 'Usuario', walletAddress = null }) {
           />
           <button
             className="btn btn-sm px-3 rounded-3 fw-bold flex-shrink-0"
-            style={{ background: 'linear-gradient(45deg, #2563eb, #3b82f6)', border: 'none', minWidth: 80 }}
+            style={{ background: 'linear-gradient(45deg, #d97706, #f59e0b)', border: 'none', minWidth: 80 }}
             onClick={handleAddReferral}
           >
             Invitar
@@ -262,7 +262,7 @@ function generateCode(seed) {
 
 function getIncentiveTier(activeCount) {
   if (activeCount >= 2) return { pct: 7, color: '#22c55e', label: '2 referidos activos' }
-  if (activeCount >= 1) return { pct: 6, color: '#3b82f6', label: '1 referido activo' }
+  if (activeCount >= 1) return { pct: 6, color: '#f59e0b', label: '1 referido activo' }
   return { pct: 5, color: 'rgba(255,255,255,0.6)', label: 'Solo fidelidad' }
 }
 
@@ -274,7 +274,7 @@ function loadReferrals() {
 }
 
 function saveReferrals(referrals) {
-  try { localStorage.setItem('manana_seguro_referrals', JSON.stringify(referrals)) } catch {}
+  try { localStorage.setItem('manana_seguro_referrals', JSON.stringify(referrals)) } catch { }
 }
 
 function getMockReferrals() {

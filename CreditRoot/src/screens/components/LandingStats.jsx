@@ -4,7 +4,7 @@ function LandingStats() {
     const { cetesRate, userRate, isLive } = useEtherfuseRate()
 
     const stats = [
-        { val: '32M', label: 'Mexicanos sin pensión ni AFORE', color: '#3b82f6' },
+        { val: '32M', label: 'Mexicanos sin pensión ni AFORE', color: '#f59e0b' },
         { val: `${userRate}%`, label: `Rendimiento en USDC para ti${isLive ? ' · en vivo' : ''}`, color: '#22c55e' },
         { val: '$2 USDC', label: 'Mínimo para empezar a ahorrar', color: '#fbbf24' },
     ]

@@ -10,7 +10,7 @@ export function PlannerScreen() {
       <div className="container py-4">
 
         <div className="badge rounded-pill px-3 py-2 mb-3"
-          style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#3b82f6', border: '1px solid rgba(59,130,246,0.2)' }}>
+          style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#f59e0b', border: '1px solid rgba(59,130,246,0.2)' }}>
           Simulador · Mañana Seguro
         </div>
         <h2 className="fw-bold mb-2" style={{ letterSpacing: '-2px' }}>¿Cuánto puedes ahorrar?</h2>

@@ -56,7 +56,7 @@ export function ContributionHistory({ walletAddress = null, lockedBalance = 0, d
             {
               label: 'Total de depósitos',
               val: `${depositCount} depósito${depositCount !== 1 ? 's' : ''}`,
-              color: '#3b82f6',
+              color: '#f59e0b',
               sub: 'Contador on-chain',
             },
             {
@@ -97,7 +97,7 @@ export function ContributionHistory({ walletAddress = null, lockedBalance = 0, d
             <h5 className="fw-bold mb-1">Movimientos registrados</h5>
             <p className="text-white-50 small mb-0">
               Historial local · Para depositar usa la sección{' '}
-              <strong style={{ color: '#3b82f6' }}>Inicio → Depósito</strong>
+              <strong style={{ color: '#f59e0b' }}>Inicio → Depósito</strong>
             </p>
           </div>
         </div>
@@ -134,14 +134,14 @@ export function ContributionHistory({ walletAddress = null, lockedBalance = 0, d
                         style={{
                           backgroundColor: entry.type === 'deposito'
                             ? 'rgba(59,130,246,0.1)' : 'rgba(34,197,94,0.1)',
-                          color: entry.type === 'deposito' ? '#3b82f6' : '#22c55e',
+                          color: entry.type === 'deposito' ? '#f59e0b' : '#22c55e',
                           border: `1px solid ${entry.type === 'deposito' ? 'rgba(59,130,246,0.2)' : 'rgba(34,197,94,0.2)'}`,
                           fontSize: 10,
                         }}>
                         {entry.type === 'deposito' ? '↓ Depósito' : '↑ Rendimiento'}
                       </span>
                     </td>
-                    <td className="fw-bold" style={{ color: '#3b82f6' }}>
+                    <td className="fw-bold" style={{ color: '#f59e0b' }}>
                       +{formatCurrencyUsd(entry.amount)}
                     </td>
                     <td style={{ color: '#22c55e' }}>
@@ -152,7 +152,7 @@ export function ContributionHistory({ walletAddress = null, lockedBalance = 0, d
                       {entry.txHash ? (
                         <a href={`https://stellar.expert/explorer/testnet/tx/${entry.txHash}`}
                           target="_blank" rel="noopener noreferrer"
-                          style={{ color: '#3b82f6', fontSize: 11 }}>
+                          style={{ color: '#f59e0b', fontSize: 11 }}>
                           ✓ Ver tx →
                         </a>
                       ) : (
@@ -204,7 +204,7 @@ function loadHistory(wallet) {
     const key = `manana_seguro_history_${wallet ?? 'demo'}`
     const raw = localStorage.getItem(key)
     if (raw) return JSON.parse(raw)
-  } catch {}
+  } catch { }
   return []
 }
 
@@ -212,5 +212,5 @@ function saveHistory(wallet, history) {
   try {
     const key = `manana_seguro_history_${wallet ?? 'demo'}`
     localStorage.setItem(key, JSON.stringify(history))
-  } catch {}
+  } catch { }
 }

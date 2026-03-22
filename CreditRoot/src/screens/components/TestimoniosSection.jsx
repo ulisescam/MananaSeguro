@@ -20,14 +20,14 @@ function TestimoniosSection() {
 
     return (
         <section className="container py-5 my-3 text-center">
-            <span className="badge rounded-pill px-3 py-2 mb-4" style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#3b82f6', border: '1px solid rgba(59,130,246,0.2)' }}>
+            <span className="badge rounded-pill px-3 py-2 mb-4" style={{ backgroundColor: 'rgba(59,130,246,0.1)', color: '#f59e0b', border: '1px solid rgba(59,130,246,0.2)' }}>
                 Usuarios reales
             </span>
             <div className="mx-auto" style={{ maxWidth: '700px' }}>
                 <p className="fs-4 mb-4" style={{ fontStyle: 'italic', fontWeight: '300', lineHeight: 1.6 }}>{t.texto}</p>
                 <div className="d-flex justify-content-center align-items-center gap-3 mb-4">
                     <div className="rounded-circle d-flex align-items-center justify-content-center fw-bold"
-                        style={{ width: 45, height: 45, backgroundColor: '#3b82f6' }}>
+                        style={{ width: 45, height: 45, backgroundColor: '#f59e0b' }}>
                         {t.inicial}
                     </div>
                     <div className="text-start">
@@ -39,7 +39,7 @@ function TestimoniosSection() {
                     {testimonios.map((_, i) => (
                         <button key={i} onClick={() => setActivo(i)}
                             className="btn p-0 border-0 rounded-pill"
-                            style={{ width: i === activo ? 24 : 8, height: 8, backgroundColor: i === activo ? '#3b82f6' : 'rgba(255,255,255,0.2)', transition: 'all 0.3s ease' }}
+                            style={{ width: i === activo ? 24 : 8, height: 8, backgroundColor: i === activo ? '#f59e0b' : 'rgba(255,255,255,0.2)', transition: 'all 0.3s ease' }}
                         />
                     ))}
                 </div>

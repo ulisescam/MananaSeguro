@@ -58,12 +58,12 @@ export function CarlosSimulator() {
           {steps.map((s, i) => (
             <div key={s} className="d-flex align-items-center" style={{ flex: i < steps.length - 1 ? 1 : 'none' }}>
               <button className="btn btn-sm rounded-circle fw-bold d-flex align-items-center justify-content-center flex-shrink-0"
-                style={{ width: 32, height: 32, backgroundColor: i <= step ? '#2563eb' : 'rgba(255,255,255,0.05)', border: i <= step ? 'none' : '1px solid rgba(255,255,255,0.1)', color: i <= step ? '#fff' : 'rgba(255,255,255,0.3)', fontSize: 12 }}
+                style={{ width: 32, height: 32, backgroundColor: i <= step ? '#d97706' : 'rgba(255,255,255,0.05)', border: i <= step ? 'none' : '1px solid rgba(255,255,255,0.1)', color: i <= step ? '#fff' : 'rgba(255,255,255,0.3)', fontSize: 12 }}
                 onClick={() => setStep(i)}>
                 {i < step ? '✓' : i + 1}
               </button>
               {i < steps.length - 1 && (
-                <div style={{ flex: 1, height: 2, backgroundColor: i < step ? '#2563eb' : 'rgba(255,255,255,0.08)', margin: '0 4px' }} />
+                <div style={{ flex: 1, height: 2, backgroundColor: i < step ? '#d97706' : 'rgba(255,255,255,0.08)', margin: '0 4px' }} />
               )}
             </div>
           ))}
@@ -124,7 +124,7 @@ export function CarlosSimulator() {
             ))}
           </div>
           <button className="btn btn-primary rounded-3 fw-bold px-4"
-            style={{ background: 'linear-gradient(45deg, #2563eb, #3b82f6)', border: 'none' }}
+            style={{ background: 'linear-gradient(45deg, #d97706, #f59e0b)', border: 'none' }}
             onClick={() => setStep(1)}>Ver ciclos de 5 años →</button>
         </div>
       )}
@@ -147,7 +147,7 @@ export function CarlosSimulator() {
                   <tr key={c.cycle} style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
                     <td className="fw-bold">{c.cycle}</td>
                     <td className="text-white-50">{c.yearStart}–{c.yearEnd}</td>
-                    <td style={{ color: '#3b82f6' }}>{formatCurrencyUsd(c.endBalance)}</td>
+                    <td style={{ color: '#f59e0b' }}>{formatCurrencyUsd(c.endBalance)}</td>
                     <td style={{ color: '#22c55e' }}>{formatCurrencyUsd(c.totalYield)}</td>
                     <td style={{ color: '#fbbf24' }}>+{formatCurrencyUsd(c.incentiveAmount)}</td>
                   </tr>
@@ -157,7 +157,7 @@ export function CarlosSimulator() {
           </div>
           <div className="d-flex gap-2">
             <button className="btn btn-sm rounded-3 text-white-50" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'none' }} onClick={() => setStep(0)}>← Volver</button>
-            <button className="btn btn-primary rounded-3 fw-bold px-4" style={{ background: 'linear-gradient(45deg, #2563eb, #3b82f6)', border: 'none' }} onClick={() => setStep(2)}>Ver emergencia mes 36 →</button>
+            <button className="btn btn-primary rounded-3 fw-bold px-4" style={{ background: 'linear-gradient(45deg, #d97706, #f59e0b)', border: 'none' }} onClick={() => setStep(2)}>Ver emergencia mes 36 →</button>
           </div>
         </div>
       )}
@@ -222,7 +222,7 @@ export function CarlosSimulator() {
 
           <div className="d-flex gap-2">
             <button className="btn btn-sm rounded-3 text-white-50" style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'none' }} onClick={() => setStep(1)}>← Volver</button>
-            <button className="btn btn-primary rounded-3 fw-bold px-4" style={{ background: 'linear-gradient(45deg, #2563eb, #3b82f6)', border: 'none' }} onClick={() => setStep(3)}>Ver resultado final →</button>
+            <button className="btn btn-primary rounded-3 fw-bold px-4" style={{ background: 'linear-gradient(45deg, #d97706, #f59e0b)', border: 'none' }} onClick={() => setStep(3)}>Ver resultado final →</button>
           </div>
         </div>
       )}
@@ -239,7 +239,7 @@ export function CarlosSimulator() {
 
           <div className="row g-3 mb-4">
             {[
-              { label: 'Total aportado', val: formatCurrencyUsd(totalAportado), color: '#3b82f6' },
+              { label: 'Total aportado', val: formatCurrencyUsd(totalAportado), color: '#f59e0b' },
               { label: 'Rendimiento Etherfuse', val: formatCurrencyUsd(saldoFinal - totalAportado - totalIncentivos), color: '#22c55e' },
               { label: 'Incentivos cobrados', val: formatCurrencyUsd(totalIncentivos), color: '#fbbf24' },
               { label: 'Saldo total', val: formatCurrencyUsd(saldoFinal), color: '#fff', bold: true },

@@ -5,7 +5,7 @@ export function AppFooter() {
       <div className="container d-flex flex-wrap justify-content-between align-items-center gap-3">
 
         <span className="fw-black" style={{ letterSpacing: '-1px', color: '#fff' }}>
-          RETIRO<span style={{ color: '#3b82f6' }}>CHAIN</span>
+          RETIRO<span style={{ color: '#f59e0b' }}>CHAIN</span>
         </span>
 
         <div className="d-flex gap-4 flex-wrap">
